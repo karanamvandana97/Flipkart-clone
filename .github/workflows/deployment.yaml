@@ -12,6 +12,9 @@ jobs:
               with: 
                 creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+            - name: install terrform 
+              uses: hashicorp/setup-terraform@v3   
+
             - name: terraform init
               working-directory: terraform
               run: terraform init
