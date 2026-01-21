@@ -29,11 +29,11 @@ jobs:
               run: dotnet publish Flipkart-clone.csproj -c Release -o publish
 
             - name: deploy to webapp
-              uses: actions/webapps-deploy@v2
+              uses: azure/webapps-deploy@v2
               with:
                 app-name: flipkart-webapp-demo
                 package: publish
-                
+
 
 
 
